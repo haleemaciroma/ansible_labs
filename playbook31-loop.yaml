@@ -1,0 +1,13 @@
+---
+- name: Create configuration file
+  hosts: all
+  tasks:
+  - name: Creating the config file
+    template:
+      src: /home/student/ansible-scripts/templates/playbook31-host.j2
+      dest: /etc/my_config.conf
+
+    vars:
+      my_servers:
+      - web_servers
+      - db_servers

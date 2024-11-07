@@ -1,0 +1,19 @@
+---
+- name: check ping module
+  hosts: centos
+  tasks:
+    - name: run ping module
+      ansible.builtin.ping:
+
+    - name: run debug module
+      ansible.builtin.debug:
+        msg: play1 "{{ web_package }}"
+
+    - name: Display facts         
+      ansible.builtin.debug:          
+        var: ansible_facts['nodename']
+
+    - name: Display motd 
+      ansible.builtin.template:          
+        src: templates/motd.j2
+        dest: /etc/motd

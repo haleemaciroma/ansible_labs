@@ -1,0 +1,8 @@
+---
+ - name: Collect information in new process from facts
+   hosts: all
+   tasks:
+     - name: this is the info we have collected frooom host
+       debug:
+         msg: my name is {{ ansible_facts['hostname'] }} & my OS {{ ansible_facts['kernel'] }}
+
