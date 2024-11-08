@@ -7,7 +7,7 @@
 
     - name: run debug module
       ansible.builtin.debug:
-        msg: play1 "{{ web_package }}"
+        msg: play1 "{{ web_package }}" This is added Jenkins test
 
     - name: Display facts         
       ansible.builtin.debug:          
